@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.taltech.iti0202.geometry.javafx.Controller">
+    <children>
+        <MenuButton fx:id="geometryButton" layoutX="28.0" layoutY="81.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="25.0" prefWidth="277.0" style="-fx-background-radius: 50;" text="Figure">
+            <items>
+                <MenuItem fx:id="geometryCircle" mnemonicParsing="false" onAction="#selectCircle" text="CIRCLE" />
+                <MenuItem fx:id="geometrySquare" mnemonicParsing="false" onAction="#selectSquare" text="SQUARE" />
+                <MenuItem fx:id="geometryTriangle" mnemonicParsing="false" onAction="#selectTriangle" text="TRIANGLE" />
+            </items>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </MenuButton>
+        <Label alignment="CENTER" layoutX="54.0" layoutY="14.0" prefHeight="57.0" prefWidth="224.0" text="Welcome!">
+            <font>
+                <Font name="Bernard MT Condensed" size="48.0" />
+            </font>
+        </Label>
+        <MenuButton fx:id="colorButton" layoutX="28.0" layoutY="169.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="25.0" prefWidth="277.0" style="-fx-background-radius: 50;" text="Color">
+            <items>
+                <MenuItem fx:id="colorBlue" mnemonicParsing="false" onAction="#selectBlue" text="BLUE" />
+                <MenuItem fx:id="colorRed" mnemonicParsing="false" onAction="#selectRed" text="RED" />
+                <MenuItem fx:id="colorGreen" mnemonicParsing="false" onAction="#selectGreen" text="GREEN" />
+                <MenuItem fx:id="colorYellow" mnemonicParsing="false" onAction="#selectYellow" text="YELLOW" />
+                <MenuItem fx:id="colorBlack" mnemonicParsing="false" onAction="#selectBlack" text="BLACK" />
+            </items>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </MenuButton>
+        <Button fx:id="confirmButton" layoutX="79.0" layoutY="206.0" mnemonicParsing="false" onAction="#confirm" onMouseEntered="#confirmFocus" onMouseExited="#confirmUnfocus" prefHeight="136.0" prefWidth="174.0" style="-fx-background-color: gray; -fx-background-radius: 100; -fx-border-color: black; -fx-border-radius: 100;" text="CONFIRM">
+            <font>
+                <Font name="Bernard MT Condensed" size="29.0" />
+            </font>
+        </Button>
+        <TextField fx:id="size" alignment="CENTER" editable="false" layoutX="28.0" layoutY="116.0" prefHeight="25.0" prefWidth="277.0" promptText="Size : 1 (1-350)">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </TextField>
+        <Slider fx:id="slider" focusTraversable="false" layoutX="71.0" layoutY="147.0" majorTickUnit="50.0" max="350.0" min="1.0" onMouseDragged="#sizeSelect" prefHeight="9.0" prefWidth="190.0" snapToTicks="true" value="1.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Slider>
+        <TextArea fx:id="consoleArea" editable="false" layoutX="341.0" layoutY="32.0" prefHeight="300.0" prefWidth="636.0">
+            <cursor>
+                <Cursor fx:constant="DISAPPEAR" />
+            </cursor>
+            <font>
+                <Font name="Bernard MT Condensed" size="20.0" />
+            </font>
+        </TextArea>
+        <Canvas fx:id="canvas" height="350.0" layoutX="325.0" layoutY="342.0" width="350.0" />
+        <Button fx:id="clearButton" layoutX="604.0" layoutY="2.0" mnemonicParsing="false" onAction="#clearConsole" onMouseEntered="#clearButtonFocus" onMouseExited="#clearButtonUnfocus" opacity="0.8" style="-fx-background-color: gray; -fx-background-radius: 50;" text="Clear console text" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.FinalController">
+    <children>
+        <AnchorPane layoutY="200.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #7FFF00;">
+         <children>
+            <Label layoutX="61.0" layoutY="78.0" prefHeight="162.0" prefWidth="400.0" text="Score :">
+               <font>
+                  <Font name="Bernard MT Condensed" size="150.0" />
+               </font>
+            </Label>
+            <Label fx:id="ScoreFieldOnFinalScreen" layoutX="474.0" layoutY="102.0" prefHeight="148.0" prefWidth="240.0">
+               <font>
+                  <Font name="Bernard MT Condensed" size="120.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="250.0" prefHeight="136.0" prefWidth="709.0" text="        Again???">
+               <font>
+                  <Font name="Bernard MT Condensed" size="96.0" />
+               </font>
+            </Label>
+         </children>
+        </AnchorPane>
+        <Label layoutX="14.0" layoutY="15.0" prefHeight="175.0" prefWidth="397.0" text="TypeGame" textAlignment="CENTER" textFill="#FF8000" underline="true">
+            <font>
+                <Font name="Bernard MT Condensed" size="96.0" />
+            </font>
+        </Label>
+        <Button fx:id="StartButtonFromFinal" layoutX="411.0" layoutY="29.0" mnemonicParsing="false" onAction="#StartGameAgain" prefHeight="72.0" prefWidth="379.0" style="-fx-background-radius: 10;" text="START" textAlignment="CENTER">
+            <font>
+                <Font name="Bernard MT Condensed" size="78.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

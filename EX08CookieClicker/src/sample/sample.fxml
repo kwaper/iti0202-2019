@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="MainBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="Cookies" alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="90.0" prefWidth="368.0" text="999999999999" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="53.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="CookieClickOnMe" fitHeight="263.0" fitWidth="270.0" focusTraversable="true" layoutX="60.0" layoutY="146.0" nodeOrientation="INHERIT" onMousePressed="#CookieMousePressed" onMouseReleased="#CookieMouseReleased" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cookie.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <AnchorPane layoutX="381.0" layoutY="65.0" prefHeight="510.0" prefWidth="411.0" style="-fx-background-color: black; -fx-opacity: 0.5;">
+         <children>
+            <Label fx:id="CursorCount" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="14.0" prefHeight="48.0" prefWidth="303.0" style="-fx-border-color: gray; -fx-border-radius: 50;" text="Cursors : 150" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="ClickerCount" alignment="CENTER" layoutX="54.0" layoutY="70.0" prefHeight="48.0" prefWidth="303.0" style="-fx-border-color: gray; -fx-border-radius: 50;" text="Clickers : 0" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+               </font>
+            </Label>
+            <Separator layoutX="29.0" layoutY="202.0" prefHeight="1.0" prefWidth="353.0" />
+            <Label alignment="CENTER" layoutX="148.0" layoutY="216.0" prefHeight="51.0" prefWidth="116.0" style="-fx-border-color: white;" text="SHOP" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="267.0" text="NAME" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="264.0" layoutY="267.0" text="PRICE" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="315.0" prefHeight="49.0" prefWidth="116.0" text="Cursor" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="364.0" prefHeight="49.0" prefWidth="124.0" text="Clicker" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="413.0" prefHeight="49.0" prefWidth="137.0" text="Granny" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="40.0" />
+               </font>
+            </Label>
+            <Separator layoutX="206.0" layoutY="302.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="1.0" />
+            <Label fx:id="CursorPrice" alignment="CENTER" layoutX="209.0" layoutY="314.0" prefHeight="51.0" prefWidth="173.0" text="10" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="ClickerPrice" alignment="CENTER" layoutX="209.0" layoutY="363.0" prefHeight="51.0" prefWidth="173.0" text="50" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="GrannyPrice" alignment="CENTER" layoutX="209.0" layoutY="412.0" prefHeight="51.0" prefWidth="173.0" text="100" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="GrannysCount" alignment="CENTER" contentDisplay="CENTER" layoutX="54.0" layoutY="127.0" prefHeight="48.0" prefWidth="303.0" style="-fx-border-color: gray; -fx-border-radius: 50;" text="Grannys : 0" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="BuyClickerButton" contentDisplay="CENTER" layoutX="155.0" layoutY="370.0" mnemonicParsing="false" onAction="#BuyClicker" onMouseEntered="#BuyClickerFocus" onMouseExited="#BuyClickerUnfocus" prefHeight="37.0" prefWidth="38.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="✔" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="BuyGrannyButton" contentDisplay="CENTER" layoutX="155.0" layoutY="419.0" mnemonicParsing="false" onAction="#BuyGranny" onMouseEntered="#BuyGrannyFocus" onMouseExited="#BuyGrannyUnfocus" prefHeight="37.0" prefWidth="38.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="✔" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="BuyCursorButton" contentDisplay="CENTER" layoutX="155.0" layoutY="323.0" mnemonicParsing="false" onAction="#BuyCursor" onMouseEntered="#BuyCursorFocus" onMouseExited="#BuyCursorUnfocus" prefHeight="37.0" prefWidth="38.0" style="-fx-background-color: grey; -fx-background-radius: 50;" text="✔" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="ExitButton" alignment="CENTER" layoutX="738.0" layoutY="6.0" mnemonicParsing="false" onAction="#Exit" onMouseEntered="#ExitFocus" onMouseExited="#ExitUnfocus" prefHeight="48.0" prefWidth="52.0" style="-fx-background-radius: 200; -fx-background-color: TRANSPARENT;" text="✘" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="194.0" fitWidth="343.0" layoutX="22.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@CookieMonster.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="InfoButton" alignment="CENTER" layoutX="666.0" layoutY="15.0" mnemonicParsing="false" onAction="#InfoMenu" onMouseEntered="#InfoFocus" onMouseExited="#InfoUnfocus" opacity="0.8" prefHeight="37.0" prefWidth="72.0" style="-fx-background-radius: 200; -fx-background-color: gray; -fx-opacity: 0.8;" text="INFO" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
